@@ -22,11 +22,13 @@ dependencies {
     compile group: 'commons-io', name: 'commons-io', version: '1.4'
     compile group: 'log4j', name: 'log4j', version: '1.2.15', ext: 'jar'
     compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.0.1' // http://jira.codehaus.org/browse/GROOVY-5747
-    compile group: 'com.google.apis', name: 'google-api-services-oauth2', version: 'v1-rev14-1.8.0-beta'
-    compile group: 'com.google.apis', name: 'google-api-services-fusiontables', version: 'v1-rev5-1.8.0-beta'
-    compile group: 'com.google.http-client', name: 'google-http-client-jackson2', version: '1.11.0-beta'
-    compile group: 'com.google.oauth-client', name: 'google-oauth-client-jetty', version: '1.11.0-beta'
-    compile group: 'com.google.oauth-client', name: 'google-oauth-client-servlet', version: '1.11.0-beta'
+    compile group: 'com.google.apis', name: 'google-api-services-oauth2', version: 'v1-rev78-1.19.0'
+    compile group: 'com.google.apis', name: 'google-api-services-fusiontables', version: 'v1-rev57-1.19.0'
+    compile group: 'com.google.api-client', name: 'google-api-client', version: '1.19.0'
+    compile group: 'com.google.http-client', name: 'google-http-client-jackson2', version: '1.19.0'
+    compile group: 'com.google.oauth-client', name: 'google-oauth-client-jetty', version: '1.19.0'
+    compile group: 'com.google.oauth-client', name: 'google-oauth-client-java6', version: '1.19.0'
+    compile group: 'com.google.oauth-client', name: 'google-oauth-client-servlet', version: '1.19.0'
     groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.0.1' // http://jira.codehaus.org/browse/GROOVY-5747
 }
 

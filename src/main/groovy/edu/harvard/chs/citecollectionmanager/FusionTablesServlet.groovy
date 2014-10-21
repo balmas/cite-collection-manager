@@ -9,7 +9,7 @@ import com.google.api.services.fusiontables.model.Sqlresponse
 import com.google.api.services.oauth2.Oauth2
 import com.google.api.services.oauth2.Oauth2.Builder
 import com.google.api.services.oauth2.model.Tokeninfo
-import com.google.api.services.oauth2.model.Userinfo
+import com.google.api.services.oauth2.model.Userinfoplus
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential.Builder
 
@@ -33,7 +33,7 @@ public class FusionTablesServlet extends HttpServlet {
     String user_access_token = request.getParameter("access_token")
     GoogleCredential google_credential = new GoogleCredential().setAccessToken(user_access_token)
     Oauth2 oauth2 = new Oauth2.Builder(CodeFlow.HTTP_TRANSPORT, CodeFlow.JSON_FACTORY, google_credential).build()
-    Userinfo userinfo = oauth2.userinfo().get().execute()
+    Userinfoplus userinfo = oauth2.userinfo().get().execute()
     
     UserAuthorization user_authorization = new UserAuthorization(userinfo)
 

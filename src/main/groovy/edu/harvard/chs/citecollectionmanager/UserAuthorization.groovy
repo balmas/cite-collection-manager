@@ -6,7 +6,7 @@ import com.google.api.services.fusiontables.Fusiontables.Builder
 import com.google.api.services.fusiontables.model.Table
 import com.google.api.services.fusiontables.model.TableList
 import com.google.api.services.fusiontables.model.Sqlresponse
-import com.google.api.services.oauth2.model.Userinfo
+import com.google.api.services.oauth2.model.Userinfoplus
 
 import edu.harvard.chs.citecollectionmanager.CodeFlow
 
@@ -18,7 +18,7 @@ class UserAuthorization {
   private static final Object lock = new Object()
   private Fusiontables fusiontables;
   private Credential credential;
-  private Userinfo user;
+  private Userinfoplus user;
   private Map table_user;
 
   private static String getTableId() {
@@ -66,7 +66,7 @@ class UserAuthorization {
     }
   }
 
-  public UserAuthorization(Userinfo user) {
+  public UserAuthorization(Userinfoplus user) {
     System.out.println("Creating UserAuthorization")
     this.user = user
     credential = CodeFlow.instance.build().loadCredential('administrator')
